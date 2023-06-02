@@ -177,6 +177,7 @@ if __name__ == "__main__":
 
     # run the predict specified by command line arguments
     startTime = time.time()
-    predict(file_path=args.file_path)
+    # predict(file_path=args.file_path)
+    predict("D:/Repos-Sadiq/ml-kit-algo/nsfw-classifier-qib/data/unsafe1.mp4")
 
 
