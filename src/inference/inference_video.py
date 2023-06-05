@@ -24,7 +24,15 @@ labels = {0: "Drawing", 1: "Hentai", 2: "Neutral", 3: "Porn", 4: "Sexy"}
 size = 128
 Q = deque(maxlen=size)
 
-
+def safepercentage(safe, notsafe, count):
+    safe_percentage = (safe/count) * 100
+    notsafe_percentage = (notsafe / count) * 100
+    print("Safe Content Percentage: ", safe_percentage, "%")
+    print("Not Safe Content Percentage: ", notsafe_percentage, "%")
+    if (safe_percentage > notsafe_percentage):
+        print("The content is SAFE")
+    else:
+        print("The content is NOT SAFE")
 
 def predict(file_path):
     
@@ -144,14 +152,15 @@ def predict(file_path):
      
    # print("Safe content: ", safe)
    # print("Not Safe content: ", notsafe)
-    safe_percentage = (safe/count) * 100
-    notsafe_percentage = (notsafe / count) * 100
-    print("Safe Content Percentage: ", safe_percentage, "%")
-    print("Not Safe Content Percentage: ", notsafe_percentage, "%")
-    if (safe_percentage > notsafe_percentage):
-        print("The content is SAFE")
-    else:
-        print("The content is NOT SAFE")
+    safepercentage(safe, notsafe, count)
+    # safe_percentage = (safe/count) * 100
+    # notsafe_percentage = (notsafe / count) * 100
+    # print("Safe Content Percentage: ", safe_percentage, "%")
+    # print("Not Safe Content Percentage: ", notsafe_percentage, "%")
+    # if (safe_percentage > notsafe_percentage):
+    #     print("The content is SAFE")
+    # else:
+    #     print("The content is NOT SAFE")
         
   #  print("Writing time: ", writingendtime - writetime)
     endTime = time.time()
