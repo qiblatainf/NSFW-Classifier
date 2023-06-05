@@ -1,5 +1,4 @@
-# Impprting Libraries & Packages
-
+# Importing Libraries & Packages
 import datetime
 import time
 import cv2
@@ -7,14 +6,13 @@ from keras.models import load_model
 import numpy as np
 from collections import deque
 import warnings
-
 import sys
+from SafePercentage import safepercentage
 warnings.filterwarnings("ignore")
 
-from SafePercentage import safepercentage
 
 sys.path.insert(1, "D:/Repos-Sadiq/ml-kit-algo/nsfw-classifier-qib/src/")
-print("sys path = " ,sys.path)
+# print("sys path = " ,sys.path)
 
 import config
 import argparse
